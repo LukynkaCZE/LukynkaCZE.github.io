@@ -1,0 +1,107 @@
+:root {
+    --background: #11111b;
+    --maincolor: #cba6f7;
+    --border: rgba(203, 166, 247, 0.6);
+    --text: #cdd6f4;
+    --white: #cdd6f4;
+    --highlight: #f9e2af;
+    --accessory: #94e2d5;
+    --scroll: #1e1e2e;
+    --error: #f38ba8;
+    --success: #a6e3a1;
+}
+
+.border {
+    border: 2px solid var(--border);
+    margin: 0 auto; /* Center the wrapper horizontally */
+    border-radius: 10px;
+    height: 100%;
+}
+
+body {
+    padding: 0.1%;
+    background: var(--background);
+    font-family: 'JetBrains Mono', cursive;
+    font-size: 17px;
+    line-height: 10px;
+    height: 97.5vh;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+p {
+    color: var(--text);
+    white-space:nowrap;
+}
+
+.main {
+    color: var(--maincolor);
+}
+.highlight {
+    color: var(--highlight);
+}
+
+input {
+    color: var(--highlight);
+    background-color: var(--background);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-family: 'JetBrains Mono', cursive;
+    margin-top: -9999px;
+    padding-left: 0;
+    white-space:nowrap;
+}
+
+.pink { color: #f5c2e7; }
+.accent { color: #cba6f7; }
+.red { color: #f38ba8; }
+.orange { color: #fab387; }
+.yellow { color: #f9e2af; }
+.green { color: #a6e3a1; }
+.aqua { color: #74c7ec; }
+.blue { color: #89b4fa; }
+.gray { color: #7f849c; }
+.invisible { color: rgba(127, 132, 156, 0); }
+
+.a-pink { color: #f5c2e7; }
+.a-accent { color: #cba6f7; }
+.a-red { color: #f38ba8; }
+.a-orange { color: #fab387; }
+.a-yellow { color: #f9e2af; }
+.a-green { color: #a6e3a1; }
+.a-aqua { color: #74c7ec; }
+.a-blue { color: #89b4fa; }
+.a-gray { color: #7f849c; }
+
+.accessory {
+    color: var(--accessory);
+}
+.white {
+    color: var(--white);
+    white-space: pre;
+    padding-left: 15px;
+}
+
+.full-main {
+    color: var(--background);
+    background: var(--maincolor);
+}
+.full-highlight {
+    color: var(--background);
+    background: var(--highlight);
+}
+.full-accessory {
+    color: var(--background);
+    background: var(--accessory);
+}
+.full-success {
+    color: var(--background);
+    background: var(--success);
+}
+.full-error {
+    color: var(--background);
+    background: var(--error);
+}
