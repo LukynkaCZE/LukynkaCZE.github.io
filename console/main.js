@@ -1,3 +1,7 @@
+let isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
+if(isMobile) {
+    window.location = "mobile.html"
+}
 
 function sendWelcomeMessage() {
     setTimeout(() => { log(ConsoleMessageType.SHELL, "sh ./welcome.sh") }, 0)
@@ -79,4 +83,7 @@ document.addEventListener("focus", () => {
 
 document.onmouseup = () => {
     setTimeout(() => { document.getElementById("textbox").focus() }, 1)
+    console.log(window.screen.width)
+    console.log(window.screen.height)
 }
+

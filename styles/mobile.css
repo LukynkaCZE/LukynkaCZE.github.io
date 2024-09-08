@@ -1,0 +1,38 @@
+:root {
+    --background: #11111b;
+    --maincolor: #cba6f7;
+    --border: rgba(203, 166, 247, 0.6);
+    --text: #cdd6f4;
+    --white: #cdd6f4;
+    --highlight: #f9e2af;
+    --accessory: #94e2d5;
+    --scroll: #1e1e2e;
+    --error: #f38ba8;
+    --success: #a6e3a1;
+}
+
+body {
+    background: var(--background);
+    padding: 5%;
+    font-family: 'JetBrains Mono', cursive;
+    font-size: 45px;
+}
+
+p {
+    color: var(--text);
+}
+
+h1 {
+    color: var(--text);
+    font-size: 70px;
+}
+
+.pink { color: #f5c2e7; }
+.accent { color: #cba6f7; }
+.red { color: #f38ba8; }
+.orange { color: #fab387; }
+.yellow { color: #f9e2af; }
+.green { color: #a6e3a1; }
+.aqua { color: #74c7ec; }
+.blue { color: #89b4fa; }
+.gray { color: #7f849c; }
