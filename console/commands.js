@@ -44,17 +44,33 @@ function sendSocials() {
     logEmpty()
 }
 
+function sendExperience() {
+    clear()
+    log(ConsoleMessageType.PLAIN, "<b>Experience:</b>")
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Lead Developer {gray}▸{/gray} {red}BlockWars")
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Developer {gray}▸{/gray} {orange}Capollo Media")
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Mod/Plugin Developer {gray}▸{/gray} {green}Captain Puffy")
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Mod Developer {gray}▸{/gray} {aqua}Neuro Sama / VedalAI")
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Lead & Lead Developer {gray}▸{/gray} {accent}Below Bedrock")
+    logEmpty()
+}
+
+
 commands.push(new Command("sh ./welcome.sh", sendLoadMessage))
 commands.push(new Command("sh welcome.sh", sendLoadMessage))
 
 commands.push(new Command("clear", clear))
 
+commands.push(new Command("experience", () => {
+    sendExperience()
+}))
+
 commands.push(new Command("help", () => {
     clear()
-    log(ConsoleMessageType.PLAIN, "💻 Type <b>{accessory}projects{/accessory}</b> to see all of my projects")
-    log(ConsoleMessageType.PLAIN, "✨ Type <b>{accessory}socials{/accessory}</b> to see all of my socials")
-    // log(ConsoleMessageType.PLAIN, "📝 Type <b>{accessory}resume{/accessory}</b> to see my resume") //TODO
-    log(ConsoleMessageType.PLAIN, "🐈 Type <b>{accessory}cat{/accessory}</b> to see meower")
+    log(ConsoleMessageType.PLAIN, "💻 Type <b><span class=\"accessory\">\"projects\"</span></b> to see all of my projects")
+    log(ConsoleMessageType.PLAIN, "✨ Type <b><span class=\"accessory\">\"socials\"</span></b> to see all of my socials")
+    log(ConsoleMessageType.PLAIN, "📝 Type <b><span class=\"accessory\">\"experience\"</span></b> to see my experience")
+    log(ConsoleMessageType.PLAIN, "🐈 Type <b>{accessory}\"cat\"{/accessory}</b> to see meower")
     logEmpty()
 }))
 
