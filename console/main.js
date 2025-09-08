@@ -12,7 +12,7 @@ function sendLoadMessage() {
     logEmpty()
     log(ConsoleMessageType.PLAIN, "<b>Hi!👋 I'm {accent}Maya{/accent} 💜!</b>", 34)
     log(ConsoleMessageType.PLAIN, "Im a passionate Software Developer from {blue}Czech Republic 🇨🇿{/blue} with")
-    log(ConsoleMessageType.PLAIN, "{yellow}over 6 years of experience{/yellow}. All coding projects are built from the ground up, from")
+    log(ConsoleMessageType.PLAIN, "{yellow}over 8 years of experience{/yellow}. All coding projects are built from the ground up, from")
     log(ConsoleMessageType.PLAIN, "planning and designing all the way to solving real-life problems with code.")
     logEmpty()
     logEmpty()

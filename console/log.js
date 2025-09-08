@@ -30,7 +30,7 @@ function log(type, message, fontSize) {
             elementString = `<p><span class="full-error">ERROR!</span>${message}</p>`
             break         
         case ConsoleMessageType.SHELL:
-            elementString = `<p><span class="main">guest@lukynka.cloud</span>:$~ ${message}</p>`
+            elementString = `<p><span class="main">guest@lukynka.cz</span>:$~ ${message}</p>`
             break         
         case ConsoleMessageType.PLAIN:
             elementString = `<p class="white">${message}</p>`

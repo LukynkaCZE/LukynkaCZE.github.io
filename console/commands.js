@@ -2,6 +2,18 @@
  * @type {Command[]}
  */
 let commands = []
+const asciiArt = `
+,---.    ,---.   ____       ____     __   ____     
+|    \\  /    | .'  __ \`.    \\   \\   /  /.'  __ \`.  
+|  ,  \\/  ,  |/   '  \\  \\    \\  _. /  '/   '  \\  \\ 
+|  |\\_   /|  ||___|  /  |     _( )_ .' |___|  /  | 
+|  _( )_/ |  |   _.-\`   | ___(_ o _)'     _.-\`   | 
+| (_ o _) |  |.'   _    ||   |(_,_)'   .'   _    | 
+|  (_,_)  |  ||  _( )_  ||   \`-'  /    |  _( )_  | 
+|  |      |  |\\ (_ o _) / \\      /     \\ (_ o _) / 
+'--'      '--' '.(_,_).'   \`-..-'       '.(_,_).'  
+                                                   
+`;
 
 /**
  * @class Command
@@ -15,7 +27,7 @@ class Command {
      */
     constructor(command, unit) {
         if (typeof unit !== 'function') {
-            throw new TypeError('Unit must be a function.');
+            throw new TypeError('Unit must be a function. (is ' +(typeof unit) +')');
         }
 
         this.name = command;
@@ -55,7 +67,6 @@ function sendExperience() {
     logEmpty()
 }
 
-
 commands.push(new Command("sh ./welcome.sh", sendLoadMessage))
 commands.push(new Command("sh welcome.sh", sendLoadMessage))
 
@@ -64,6 +75,52 @@ commands.push(new Command("clear", clear))
 commands.push(new Command("experience", () => {
     sendExperience()
 }))
+
+commands.push(new Command("gay", () => {
+    log(ConsoleMessageType.PLAIN, "true that")
+}))
+
+commands.push(new Command("sudo rm -rf /", () => {
+    clear()
+    log(ConsoleMessageType.SUCCESS, " {green} Removed the french language pack!")
+    commands = null
+}))
+
+commands.push(new Command("rm -rf /", () => {
+    clear()
+    log(ConsoleMessageType.SUCCESS, " {green} Removed the french language pack!")
+    commands = null
+}))
+
+commands.push(new Command("sudo rm -fr /", () => {
+    clear()
+    log(ConsoleMessageType.SUCCESS, " {green} Removed the french language pack!")
+    commands = null
+}))
+
+commands.push(new Command("rm -fr /", () => {
+    clear()
+    log(ConsoleMessageType.SUCCESS, " {green} Removed the french language pack!")
+    commands = null
+}))
+
+commands.push(new Command("discord", () => {
+    log(ConsoleMessageType.BREAK)
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} {accent}<i class=\"fa-brands fa-discord\"></i> <a class='a-accent' href='https://discord.gg/SA9nmfMkdc'>Discord</a>")
+    log(ConsoleMessageType.BREAK)
+}))
+
+commands.push(new Command("neofetch", () => {
+    clear();
+    log(ConsoleMessageType.PLAIN, asciiArt);
+    log(ConsoleMessageType.PLAIN, "<br>"); // Add a line break for spacing
+    log(ConsoleMessageType.PLAIN, "<b><span class=\"accessory\">OS:</span></b> MayaOS");
+    log(ConsoleMessageType.PLAIN, "<b><span class=\"accessory\">Host:</span></b> lukynka.cz");
+    log(ConsoleMessageType.PLAIN, "<b><span class=\"accessory\">Kernel:</span></b> 4.20.69");
+    log(ConsoleMessageType.PLAIN, "<b><span class=\"accessory\">CPU:</span></b> Intel Pentium G3260 3.30GHz");
+    log(ConsoleMessageType.PLAIN, "<b><span class=\"accessory\">GPU:</span></b> a big one");
+    logEmpty();
+}));
 
 commands.push(new Command("help", () => {
     clear()
@@ -107,12 +164,12 @@ commands.push(new Command("projects", () => {
     logEmpty()
     log(ConsoleMessageType.PLAIN, "🌊 {green}<b>DockyardMC\n</b>{/green}", 20)
     log(ConsoleMessageType.PLAIN, "{gray}-{/gray} DockyardMC open-source, fast and lightweight Minecraft server protocol")
-    log(ConsoleMessageType.PLAIN, "  implementation that's written from scratch in Kotlin without any code from Mojang" )
+    log(ConsoleMessageType.PLAIN, "  implementation that's written from scratch in Kotlin without any code from Mojang")
     log(ConsoleMessageType.PLAIN, "  <a class='a-green' href='https://github.com/DockyardMC/Dockyard/'>[Open on GitHub ↗]</a>")
     logEmpty()
     log(ConsoleMessageType.PLAIN, "🔮 {aqua}<b>Ember Seeker\n</b>{/green}", 20)
-    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Minecraft server inspired by the Hermitcraft Decked Out minigame.")
-    log(ConsoleMessageType.PLAIN, "  Fully open-source and built with DockyardMC" )
+    log(ConsoleMessageType.PLAIN, "{gray}-{/gray} Minecraft server inspired by the Hermitcraft Decked Out 2 minigame.")
+    log(ConsoleMessageType.PLAIN, "  Made with DockyardMC")
     log(ConsoleMessageType.PLAIN, "  <a class='a-aqua' href='https://github.com/EmberSeekerMC/'>[Open on GitHub ↗]</a>")
     logEmpty()
 }))
